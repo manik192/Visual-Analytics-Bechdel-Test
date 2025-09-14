@@ -3,10 +3,9 @@
 After I scoped the project, I combined a Bechdel-style outcome with general movie metadata so I could study **how inclusivity patterns evolved by decade, studio, and genre**, and how those patterns related to **ratings, awards, and ROI**.
 
 ## Where the data came from
-- **Bechdel outcome (pass/fail variants):** [add exact source link]
-- **Movie metadata (title, year, genres, production companies, runtime, ratings/votes):** [add exact source link]
-- **Awards (Oscars nominations/wins):** [add exact source link]
-- **Economics (budget, domestic & international gross):** included with the metadata or merged from a companion file.
+- **Bechdel outcome (pass/fail variants):** https://www.kaggle.com/datasets/mathurinache/women-in-movies
+- **Movie metadata (title, year, genres, production companies, runtime, ratings/votes):** (https://www.kaggle.com/datasets/danielgrijalvas/movies)
+- **Awards (Oscars nominations/wins):** (https://www.kaggle.com/datasets/unanimad/the-oscar-award)
 
 > I followed each source’s license/terms of use. I included links above so anyone can re-download exactly what I used.
 
