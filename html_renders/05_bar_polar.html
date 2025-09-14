@@ -1,0 +1,38 @@
+<div id="05-bar-polar" style="width:100%;height:520px;"></div>
+<script>
+(function(){
+  var _data = [{"hovertemplate":"pass_pct=%{marker.color}<br>genre=%{theta}<extra></extra>","legendgroup":"","marker":{"color":{"dtype":"f8","bdata":"L7rooouuTkCtG0yRz7pNQOYUvJyCl01AR5v3KS4ZTUBH6faV1btIQLvssssuu0hArRnqzpqhSEBfQnsJ7SVHQM5u4VdjIkdAAAAAAAAAREBreGf0Uv1CQKuqqqqq6kFA"},"coloraxis":"coloraxis","pattern":{"shape":""}},"name":"","r":{"dtype":"f8","bdata":"L7rooouuTkCtG0yRz7pNQOYUvJyCl01AR5v3KS4ZTUBH6faV1btIQLvssssuu0hArRnqzpqhSEBfQnsJ7SVHQM5u4VdjIkdAAAAAAAAAREBreGf0Uv1CQKuqqqqq6kFA"},"showlegend":false,"subplot":"polar","theta":["Music","Romance","Horror","Family","Drama","Biography","Comedy","Mystery","Fantasy","History","Thriller","Animation"],"type":"barpolar"}];
+  var _layout = {"polar":{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"angularaxis":{"direction":"clockwise","rotation":90}},"coloraxis":{"colorbar":{"title":{"text":"pass_pct"}},"colorscale":[[0.0,"rgb(0,0,255)"],[1.0,"rgb(255,0,0)"]]},"legend":{"tracegroupgap":0},"title":{"text":"Bechdel Pass Rate by Genre (well-represented genres)"},"barmode":"relative","margin":{"l":40,"r":40,"t":80,"b":40},"height":520};
+  var _config = {responsive:true,displaylogo:false};
+
+  function draw(){
+    var el = document.getElementById("05-bar-polar");
+    if(!el) return setTimeout(draw, 30);
+    if(!window.Plotly) return setTimeout(draw, 50);
+    try {
+      Plotly.newPlot(el, _data, _layout, _config);
+    } catch(e) {
+      console.error("Plotly render error:", e);
+    }
+  }
+
+  // If Plotly isn't loaded, inject it once, then render
+  if(!window.Plotly){
+    if(!document.getElementById("plotly-cdn-loader")){
+      var s = document.createElement("script");
+      s.id = "plotly-cdn-loader";
+      s.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
+      s.onload = draw;
+      document.head.appendChild(s);
+    } else {
+      setTimeout(draw, 100);
+    }
+  } else {
+    draw();
+  }
+
+  if(document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", draw);
+  }
+})();
+</script>

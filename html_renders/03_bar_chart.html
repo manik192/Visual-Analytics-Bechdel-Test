@@ -1,0 +1,38 @@
+<div id="03_bar_chart.html" style="width:100%;height:520px;"></div>
+<script>
+(function(){
+  var _data = [{"customdata":{"dtype":"f8","bdata":"AAAAAAAAIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAAAAAAAAAAAAAAACARUAAAAAAAAAAAAAAAAAAAAAAAAAAAABAWUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXkAAAAAAAAAAAAAAAAAAAAAAAAAAAACAX0AAAAAAAAAAAAAAAAAAAAAAAAAAAACAT0AAAAAAAAAAAAAAAAAAAAAAAAAAAADAVEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMEAAAAAAAAAAAAAAAAAAAAAA","shape":"20, 3"},"hovertemplate":"production_company=%{x}<br>nom_rate=%{y}<br>film_count=%{customdata[0]}<br>win_rate=%{customdata[1]}<br>avg_wins=%{customdata[2]}<br>pass_rate=%{marker.color}<extra></extra>","legendgroup":"","marker":{"color":{"dtype":"f8","bdata":"uB6F61E4NkCF61G4HrVRQArXo3A9Kk1A4XoUrkdBR0AK16NwPcpEQPYoXI/CFUFAPQrXo3A9RECkcD0K1wNHQHsUrkfhekRAAAAAAAAASUAUrkfhenREQArXo3A9CkhAAAAAAAAATkB7FK5H4apQQHsUrkfhqlBAuB6F61F4OkCuR+F6FC5CQBSuR+F6hFJAhetRuB61UUAAAAAAAEBPQA=="},"coloraxis":"coloraxis","pattern":{"shape":""}},"name":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Regency Enterprises","Miramax","United Artists","DreamWorks","Paramount Pictures","Warner Bros.","Universal Pictures","New Line Cinema","Twentieth Century Fox","Fox 2000 Pictures","Summit Entertainment","Walt Disney Pictures","Walt Disney Animation Studios","Dimension Films","TriStar Pictures","Touchstone Pictures","The Weinstein Company","Screen Gems","Fox Searchlight Pictures","Revolution Studios"],"xaxis":"x","y":{"dtype":"f8","bdata":"uB6F61E4JkApXI/C9aggQClcj8L1qCBAmpmZmZmZEkDD9Shcj8IHQAAAAAAAAARACtejcD0KA0BxPQrXo3D5PzMzMzMzM/M/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="},"yaxis":"y","type":"bar"}];
+  var _layout = {"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Studio"},"tickangle":45},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"% Nominated"},"ticksuffix":"%","rangemode":"tozero"},"coloraxis":{"colorbar":{"title":{"text":"pass_rate"}},"colorscale":[[0.0,"rgb(165,0,38)"],[0.1,"rgb(215,48,39)"],[0.2,"rgb(244,109,67)"],[0.3,"rgb(253,174,97)"],[0.4,"rgb(254,224,139)"],[0.5,"rgb(255,255,191)"],[0.6,"rgb(217,239,139)"],[0.7,"rgb(166,217,106)"],[0.8,"rgb(102,189,99)"],[0.9,"rgb(26,152,80)"],[1.0,"rgb(0,104,55)"]]},"legend":{"tracegroupgap":0},"title":{"text":"Studios with the Highest Share of Oscar-Nominated Films (min 8 films)"},"barmode":"relative","margin":{"l":60,"r":20,"t":70,"b":90},"height":520};
+  var _config = {responsive:true,displaylogo:false};
+
+  function draw(){
+    var el = document.getElementById("03_bar_chart.html");
+    if(!el) return setTimeout(draw, 30);
+    if(!window.Plotly) return setTimeout(draw, 50);
+    try {
+      Plotly.newPlot(el, _data, _layout, _config);
+    } catch(e) {
+      console.error("Plotly render error:", e);
+    }
+  }
+
+  // If Plotly isn't loaded, inject it once, then render
+  if(!window.Plotly){
+    if(!document.getElementById("plotly-cdn-loader")){
+      var s = document.createElement("script");
+      s.id = "plotly-cdn-loader";
+      s.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
+      s.onload = draw;
+      document.head.appendChild(s);
+    } else {
+      setTimeout(draw, 100);
+    }
+  } else {
+    draw();
+  }
+
+  if(document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", draw);
+  }
+})();
+</script>

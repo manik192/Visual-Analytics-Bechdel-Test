@@ -1,0 +1,38 @@
+<div id="scatter-roi-clean" style="width:100%;height:520px;"></div>
+<script>
+(function(){
+  var _data = [{"customdata":{"dtype":"f8","bdata":"AAAAAAAAHEB9fh9HcZopQAAAAAAAABRAnnWAoA4pEEAAAAAAAAAcQFqa7GMXgBRAAAAAAAAALkBcEp9uD0sNQAAAAAAAwF5AvSQCescVJUAAAAAAAAA4QJhWh52wTxVAAAAAAAAAGEDFs4qJ7YAUQAAAAAAAgEVAxJyVogEkFkAAAAAAAAAxQF0gn9CYBxZAAAAAAAAAGEATjg3jmrUPQAAAAAAAABRAtsxhuGAwQUAAAAAAAAAzQCfYsEnkVRtAAAAAAAAANkCiE9dJ/IwTQAAAAAAAADhATTZxMl7VMkAAAAAAAAAUQBzIKdXZwCBAAAAAAAAAFECWoNBUjXMPQAAAAAAAADJAtAKfmgjyE0AAAAAAAAAYQHPOek1uc0FAAAAAAAAAOkBHo0/EEaMVQAAAAAAAADhA2H0LDfSAGkAAAAAAAIBPQNMji8KpWhZAAAAAAABAWUCO63JK2x8nQAAAAAAAABxALgSojfzuHUAAAAAAAAAgQE6m8WmVVyVAAAAAAAAAIkDoC7IhpSISQAAAAAAAACBACg7YDKYbFkAAAAAAAAAwQKxNtANcsgxAAAAAAAAAHEAqYhegj0YaQAAAAAAAADtAcR69jyhiGEAAAAAAAAAUQBKBML1z6SJAAAAAAAAANkCxH7We4tggQAAAAAAAACZAnb2dEEjtF0AAAAAAAABBQIuOnr+xqxlAAAAAAAAANUAJvkEnCNkUQAAAAAAAwFRAWaJAsMmNKkAAAAAAAAAUQGr7bETcLB9AAAAAAAAAKEAOI5HLM9wgQAAAAAAAgF9AeVdJsZONJEAAAAAAAAAkQC0c7yPV6g5AAAAAAAAASkDf0ZcXseYaQAAAAAAAAF5AdOvzFjwlFUA=","shape":"41, 2"},"hovertemplate":"<b>%{hovertext}</b><br><br>pass_rate_pct=%{marker.color:.1f}<br>avg_roi_ws=%{y:.1f}<br>film_count=%{customdata[0]}<br>avg_roi=%{customdata[1]:.1f}<extra></extra>","hovertext":["Alcon Entertainment","BBC Films","CBS Films","Castle Rock Entertainment","Columbia Pictures","Dimension Films","Dino De Laurentiis Company","DreamWorks","DreamWorks Animation","EuropaCorp","FilmDistrict","Focus Features","Fox 2000 Pictures","Fox Searchlight Pictures","Hollywood Pictures","Lions Gate Films","Lionsgate","Lucasfilm","Metro-Goldwyn-Mayer (MGM)","Miramax","New Line Cinema","Paramount Pictures","Paramount Vantage","Pixar Animation Studios","Regency Enterprises","Relativity Media","Revolution Studios","Rogue Pictures","Screen Gems","StudioCanal","Summit Entertainment","The Weinstein Company","Touchstone Pictures","TriStar Pictures","Twentieth Century Fox","Twentieth Century Fox Animation","United Artists","Universal Pictures","Walt Disney Animation Studios","Walt Disney Pictures","Warner Bros."],"legendgroup":"","marker":{"color":{"dtype":"f8","bdata":"rkfhehRuRUAAAAAAAABOQBSuR+F6lCxACtejcD2qQEB7FK5H4bpEQHsUrkfhqlBAAAAAAAAASUDhehSuR0FHQIXrUbgehSdACtejcD2qQEAAAAAAAABEQK5H4XoUDkVAAAAAAAAASUCF61G4HrVRQAAAAAAAAERAAAAAAAAATkBI4XoUrsdLQOxRuB6FqzBASOF6FK4nRUCF61G4HrVRQKRwPQrXA0dACtejcD3KREBSuB6F65FMQAAAAAAAADlAuB6F61E4NkAAAAAAAAA5QAAAAAAAQE9AUrgeheuRTEAUrkfheoRSQAAAAAAAAERAFK5H4Xp0RECuR+F6FC5CQLgehetReDpAexSuR+GqUEB7FK5H4XpEQAAAAAAAADRACtejcD0qTUA9CtejcD1EQAAAAAAAAE5ACtejcD0KSED2KFyPwhVBQA=="},"coloraxis":"coloraxis","size":{"dtype":"i1","bdata":"BwUHD3sYBisRBgUTFhgFBRIGGhg/ZQcICQgQBxsFFgsiFVMFDH4KNHg="},"sizemode":"area","sizeref":0.315,"symbol":"circle","line":{"width":0},"opacity":0.7},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"rkfhehRuRUAAAAAAAABOQBSuR+F6lCxACtejcD2qQEB7FK5H4bpEQHsUrkfhqlBAAAAAAAAASUDhehSuR0FHQIXrUbgehSdACtejcD2qQEAAAAAAAABEQK5H4XoUDkVAAAAAAAAASUCF61G4HrVRQAAAAAAAAERAAAAAAAAATkBI4XoUrsdLQOxRuB6FqzBASOF6FK4nRUCF61G4HrVRQKRwPQrXA0dACtejcD3KREBSuB6F65FMQAAAAAAAADlAuB6F61E4NkAAAAAAAAA5QAAAAAAAQE9AUrgeheuRTEAUrkfheoRSQAAAAAAAAERAFK5H4Xp0RECuR+F6FC5CQLgehetReDpAexSuR+GqUEB7FK5H4XpEQAAAAAAAADRACtejcD0qTUA9CtejcD1EQAAAAAAAAE5ACtejcD0KSED2KFyPwhVBQA=="},"xaxis":"x","y":{"dtype":"f8","bdata":"fX4fR3GaKUCedYCgDikQQFqa7GMXgBRAXBKfbg9LDUC9JAJ6xxUlQJhWh52wTxVAxbOKie2AFEDEnJWiASQWQF0gn9CYBxZAE44N45q1D0C2zGG4YDBBQCfYsEnkVRtAohPXSfyME0BNNnEyXtUyQBzIKdXZwCBAlqDQVI1zD0C0Ap+aCPITQCg01xGcWEFAR6NPxBGjFUDYfQsN9IAaQNMji8KpWhZAjutyStsfJ0AuBKiN/O4dQE6m8WmVVyVA6AuyIaUiEkAKDtgMphsWQL8C35Rw7wxAKmIXoI9GGkBxHr2PKGIYQBKBML1z6SJAsR+1nuLYIECdvZ0QSO0XQIuOnr+xqxlACb5BJwjZFEBZokCwyY0qQGr7bETcLB9ADiORyzPcIEB5V0mxk40kQC0c7yPV6g5A39GXF7HmGkB06/MWPCUVQA=="},"yaxis":"y","type":"scatter"}];
+  var _layout = {"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Bechdel Pass Rate (%)"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Average ROI (winsorized 1\u201399%)"}},"coloraxis":{"colorbar":{"title":{"text":"pass_rate_pct"}},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"legend":{"tracegroupgap":0,"itemsizing":"constant"},"title":{"text":"Studios: Bechdel Pass Rate vs Average ROI (winsorized)"},"margin":{"l":60,"r":20,"t":70,"b":50},"height":520,"showlegend":false};
+  var _config = {responsive:true,displaylogo:false};
+
+  function draw(){
+    var el = document.getElementById("scatter-roi-clean");
+    if(!el) return setTimeout(draw, 30);
+    if(!window.Plotly) return setTimeout(draw, 50);
+    try {
+      Plotly.newPlot(el, _data, _layout, _config);
+    } catch(e) {
+      console.error("Plotly render error:", e);
+    }
+  }
+
+  // If Plotly isn't loaded, inject it once, then render
+  if(!window.Plotly){
+    if(!document.getElementById("plotly-cdn-loader")){
+      var s = document.createElement("script");
+      s.id = "plotly-cdn-loader";
+      s.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
+      s.onload = draw;
+      document.head.appendChild(s);
+    } else {
+      setTimeout(draw, 100);
+    }
+  } else {
+    draw();
+  }
+
+  if(document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", draw);
+  }
+})();
+</script>

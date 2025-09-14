@@ -1,0 +1,38 @@
+<div id="02_tree_map.html" style="width:100%;height:520px;"></div>
+<script>
+(function(){
+  var _data = [{"branchvalues":"total","customdata":{"dtype":"f8","bdata":"VVVVVVVV1T+J2pWoXYnaP1VVVVVVVeU/cUfcEXfE3T8eHh4eHh6+PyivobyG8to/AAAAAAAA4D+rqqqqqqrmP3Icx3Ecx+E/O7ETO7ET2z+rqqqqqqrmP13XdV3Xdd0/Gb4RBSad2j8AAAAAAADkP0J7Ce0ltOc/L7rooosu2j/x8PDw8PDQP1VVVVVVVeU/5LJioIQ32j96nud5nufZP0/sxE7sxN4/3t3d3d3d1T8=","shape":"22, 1"},"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"labels=%{label}<br>film_count=%{value}<br>parent=%{parent}<br>id=%{id}<br>pass_pct=%{color}<extra></extra>","ids":["Castle Rock Entertainment","Columbia Pictures","Dimension Films","DreamWorks","DreamWorks Animation","Focus Features","Fox 2000 Pictures","Fox Searchlight Pictures","Lionsgate","Metro-Goldwyn-Mayer (MGM)","Miramax","New Line Cinema","Paramount Pictures","Revolution Studios","Screen Gems","Summit Entertainment","Touchstone Pictures","TriStar Pictures","Twentieth Century Fox","Universal Pictures","Walt Disney Pictures","Warner Bros."],"labels":["Castle Rock Entertainment","Columbia Pictures","Dimension Films","DreamWorks","DreamWorks Animation","Focus Features","Fox 2000 Pictures","Fox Searchlight Pictures","Lionsgate","Metro-Goldwyn-Mayer (MGM)","Miramax","New Line Cinema","Paramount Pictures","Revolution Studios","Screen Gems","Summit Entertainment","Touchstone Pictures","TriStar Pictures","Twentieth Century Fox","Universal Pictures","Walt Disney Pictures","Warner Bros."],"marker":{"coloraxis":"coloraxis","colors":{"dtype":"f8","bdata":"VVVVVVVV1T+J2pWoXYnaP1VVVVVVVeU/cUfcEXfE3T8eHh4eHh6+PyivobyG8to/AAAAAAAA4D+rqqqqqqrmP3Icx3Ecx+E/O7ETO7ET2z+rqqqqqqrmP13XdV3Xdd0/Gb4RBSad2j8AAAAAAADkP0J7Ce0ltOc/L7rooosu2j/x8PDw8PDQP1VVVVVVVeU/5LJioIQ32j96nud5nufZP0/sxE7sxN4/3t3d3d3d1T8="}},"name":"","parents":["","","","","","","","","","","","","","","","","","","","","",""],"values":{"dtype":"f8","bdata":"AAAAAAAALkAAAAAAAMBeQAAAAAAAADhAAAAAAACARUAAAAAAAAAxQAAAAAAAADNAAAAAAAAANkAAAAAAAAA4QAAAAAAAADJAAAAAAAAAOkAAAAAAAAA4QAAAAAAAgE9AAAAAAABAWUAAAAAAAAAwQAAAAAAAADtAAAAAAAAANkAAAAAAAABBQAAAAAAAADVAAAAAAADAVEAAAAAAAIBfQAAAAAAAAEpAAAAAAAAAXkA="},"type":"treemap"}];
+  var _layout = {"coloraxis":{"colorbar":{"title":{"text":"pass_pct"}},"colorscale":[[0.0,"rgb(165,0,38)"],[0.1,"rgb(215,48,39)"],[0.2,"rgb(244,109,67)"],[0.3,"rgb(253,174,97)"],[0.4,"rgb(254,224,139)"],[0.5,"rgb(255,255,191)"],[0.6,"rgb(217,239,139)"],[0.7,"rgb(166,217,106)"],[0.8,"rgb(102,189,99)"],[0.9,"rgb(26,152,80)"],[1.0,"rgb(0,104,55)"]]},"legend":{"tracegroupgap":0},"title":{"text":"Major Studios Ranked by Bechdel Pass Rate"},"margin":{"l":20,"r":20,"t":60,"b":20},"height":520};
+  var _config = {responsive:true,displaylogo:false};
+
+  function draw(){
+    var el = document.getElementById("02_tree_map.html");
+    if(!el) return setTimeout(draw, 30);
+    if(!window.Plotly) return setTimeout(draw, 50);
+    try {
+      Plotly.newPlot(el, _data, _layout, _config);
+    } catch(e) {
+      console.error("Plotly render error:", e);
+    }
+  }
+
+  // If Plotly isn't loaded, inject it once, then render
+  if(!window.Plotly){
+    if(!document.getElementById("plotly-cdn-loader")){
+      var s = document.createElement("script");
+      s.id = "plotly-cdn-loader";
+      s.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
+      s.onload = draw;
+      document.head.appendChild(s);
+    } else {
+      setTimeout(draw, 100);
+    }
+  } else {
+    draw();
+  }
+
+  if(document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", draw);
+  }
+})();
+</script>
