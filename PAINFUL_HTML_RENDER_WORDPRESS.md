@@ -114,7 +114,7 @@ I exported one figure per HTML file.
 
 ---
 
-## The Actual Data Cleaning I Performed (Short, Honest Version)
+## The Sequence of Steps
 
 All of this lives in **`project_1.ipynb`**:
 
@@ -181,17 +181,3 @@ All of this lives in **`project_1.ipynb`**:
 - Changing **only** the iframe `src` to a different domain flipped success/failure → cross-origin or mixed-content.
 
 ---
-
-## Mini FAQ
-
-- **Can I paste full Plotly HTML directly into a post?**  
-  Not reliably. WordPress strips scripts. Use an iframe to a standalone HTML.
-
-- **Do I need a plugin to embed?**  
-  No. A plain Custom HTML block with an iframe is enough.
-
-- **How do I update without editing the post again?**  
-  Overwrite the same HTML file on the server. If cached, add `?v=<date>` once or clear caches.
-
-- **Where do my charts live?**  
-  I keep them in `/public_html/charts/` and reference them by a stable URL.
